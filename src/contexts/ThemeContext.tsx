@@ -10,6 +10,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
+  // Initialize theme from localStorage or default to dark
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem('calculator-theme')
     return (saved === 'light' || saved === 'dark') ? saved : 'dark'

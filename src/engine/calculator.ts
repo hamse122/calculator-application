@@ -1,5 +1,10 @@
 import Decimal from 'decimal.js'
 
+/**
+ * Calculator engine using decimal.js for precise arithmetic.
+ * All functions are pure and return new state objects.
+ */
+
 export interface CalculatorState {
   display: string
   previousValue: string | null
@@ -8,11 +13,17 @@ export interface CalculatorState {
   hasDecimal: boolean
 }
 
+// Maximum characters that can be displayed in the calculator display
 const MAX_DISPLAY_LENGTH = 16
+// Maximum value before switching to scientific notation
 const MAX_VALUE = new Decimal(10).pow(MAX_DISPLAY_LENGTH + 5)
 
 /**
- * Formats a number for display, handling overflow with scientific notation
+ * Formats a number for display, handling overflow with scientific notation.
+ * Ensures numbers fit within the display width while maintaining readability.
+ * 
+ * @param value - The number string to format
+ * @returns Formatted string for display
  */
 export function formatDisplay(value: string): string {
   try {
@@ -202,9 +213,15 @@ export function negate(value: string): string {
 }
 
 /**
- * Handles digit input
+ * Handles digit input with proper state management.
+ * Prevents overflow and handles edge cases like error states.
+ * 
+ * @param state - Current calculator state
+ * @param digit - The digit to input (0-9)
+ * @returns Updated calculator state
  */
 export function inputDigit(state: CalculatorState, digit: string): CalculatorState {
+  // Reset display when starting a new number after an operation
   if (state.waitingForOperand) {
     return {
       ...state,

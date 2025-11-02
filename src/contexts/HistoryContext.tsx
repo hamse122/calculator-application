@@ -9,6 +9,7 @@ interface HistoryContextType {
 
 const HistoryContext = createContext<HistoryContextType | undefined>(undefined)
 
+// Maximum number of history entries to keep in memory and localStorage
 const MAX_HISTORY_ENTRIES = 50
 
 export function HistoryProvider({ children }: { children: ReactNode }) {

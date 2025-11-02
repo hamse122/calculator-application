@@ -2,6 +2,11 @@
 
 A beautiful, production-ready calculator web application built with React, TypeScript, and Vite. This calculator features a pixel-perfect Apple iOS Calculator-inspired UI with full functionality including basic operations, scientific functions, memory operations, and history tracking.
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-18.2-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)
+![Vite](https://img.shields.io/badge/Vite-5.0-purple)
+
 ## Features
 
 ### 🎨 Visual & UX

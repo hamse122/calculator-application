@@ -28,8 +28,11 @@ export default function Calculator() {
     hasDecimal: false,
   })
 
+  // Scientific mode toggle state
   const [isScientificMode, setIsScientificMode] = useState(false)
+  // Track last input for handling special cases (e.g., exponent operations)
   const [lastInput, setLastInput] = useState<string | null>(null)
+  // Flag to indicate when waiting for exponent input in power operations
   const [expectingExponent, setExpectingExponent] = useState(false)
 
   const { memoryAdd, memorySubtract, memoryRecall } = useMemory()
@@ -161,9 +164,11 @@ export default function Calculator() {
     []
   )
 
-  // Handle keyboard input
+  // Handle keyboard input for full keyboard support
+  // This allows users to use the calculator without mouse interaction
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore keyboard events when typing in input fields
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return
       }
@@ -258,6 +263,7 @@ export default function Calculator() {
   }, [handleButtonClick, handleMemoryOperation, state.display])
 
   // Handle exponent calculation when equals is pressed
+  // This ensures power operations (xⁿ) complete correctly
   useEffect(() => {
     if (
       expectingExponent &&
@@ -267,7 +273,7 @@ export default function Calculator() {
       lastInput !== 'xⁿ' &&
       lastInput !== '^'
     ) {
-      // Auto-calculate when another operator or equals is pressed
+      // Auto-calculate when equals is pressed to complete the power operation
       if (lastInput === '=') {
         const result = calculatePower(state.previousValue, state.display)
         setState(prev => ({
@@ -292,8 +298,9 @@ export default function Calculator() {
               <h1 className="text-2xl md:text-3xl font-light text-white">Calculator</h1>
               <button
                 onClick={() => setIsScientificMode(!isScientificMode)}
-                className="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-full hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors text-sm md:text-base"
+                className="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-full hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-orange-500"
                 aria-label={`Toggle ${isScientificMode ? 'basic' : 'scientific'} mode`}
+                type="button"
               >
                 {isScientificMode ? 'Basic' : 'Scientific'}
               </button>

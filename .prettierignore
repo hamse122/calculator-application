@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+coverage
+storybook-static
+*.log
+.vscode
+.idea
+

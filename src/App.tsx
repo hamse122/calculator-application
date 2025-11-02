@@ -1,3 +1,7 @@
+/**
+ * Main App component
+ * Wraps the calculator with all necessary context providers
+ */
 import React from 'react'
 import Calculator from './components/Calculator'
 import { ThemeProvider } from './contexts/ThemeContext'

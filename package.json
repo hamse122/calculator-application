@@ -1,6 +1,9 @@
 {
   "name": "apple-calculator",
   "version": "1.0.0",
+  "description": "A beautiful, production-ready Apple-style calculator web application built with React, TypeScript, and Vite",
+  "keywords": ["calculator", "react", "typescript", "vite", "tailwindcss", "accessibility"],
+  "author": "Hamse",
   "type": "module",
   "scripts": {
     "dev": "vite",

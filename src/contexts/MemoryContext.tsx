@@ -33,6 +33,10 @@ export function MemoryProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('calculator-memory', JSON.stringify(memory))
   }, [memory])
 
+  /**
+   * Adds a value to the current memory
+   * @param value - The value to add to memory
+   */
   const memoryAdd = (value: string) => {
     try {
       const current = new Decimal(memory.value)
@@ -40,10 +44,14 @@ export function MemoryProvider({ children }: { children: ReactNode }) {
       const newValue = current.plus(addend).toString()
       setMemory({ value: newValue, hasValue: true })
     } catch {
-      // Ignore invalid operations
+      // Silently ignore invalid operations to prevent errors
     }
   }
 
+  /**
+   * Subtracts a value from the current memory
+   * @param value - The value to subtract from memory
+   */
   const memorySubtract = (value: string) => {
     try {
       const current = new Decimal(memory.value)
@@ -51,14 +59,21 @@ export function MemoryProvider({ children }: { children: ReactNode }) {
       const newValue = current.minus(subtrahend).toString()
       setMemory({ value: newValue, hasValue: true })
     } catch {
-      // Ignore invalid operations
+      // Silently ignore invalid operations to prevent errors
     }
   }
 
+  /**
+   * Recalls the current memory value
+   * @returns Memory value as string, or '0' if memory is empty
+   */
   const memoryRecall = (): string => {
     return memory.hasValue ? memory.value : '0'
   }
 
+  /**
+   * Clears the memory, resetting it to empty state
+   */
   const memoryClear = () => {
     setMemory({ value: '0', hasValue: false })
   }

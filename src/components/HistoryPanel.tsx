@@ -11,6 +11,11 @@ interface HistoryPanelProps {
 export default function HistoryPanel({ className = '', onSelectHistory }: HistoryPanelProps) {
   const { history, clearHistory } = useHistory()
 
+  /**
+   * Formats timestamp to readable time string
+   * @param timestamp - Unix timestamp in milliseconds
+   * @returns Formatted time string (HH:MM format)
+   */
   const formatTime = (timestamp: number) => {
     const date = new Date(timestamp)
     return date.toLocaleTimeString('en-US', {
@@ -35,7 +40,7 @@ export default function HistoryPanel({ className = '', onSelectHistory }: Histor
       </div>
       <div className="space-y-2 max-h-64 overflow-y-auto">
         {history.length === 0 ? (
-          <p className="text-gray-500 text-center py-4">No history yet</p>
+          <p className="text-gray-500 text-center py-4" role="status">No history yet</p>
         ) : (
           history.map((entry: HistoryEntry, index: number) => (
             <button

@@ -1,13 +1,16 @@
 import React from 'react'
 import type { ButtonType } from '../types'
 
+/**
+ * Button component props interface
+ */
 interface ButtonProps {
   label: string
   onClick: () => void
   type?: ButtonType
   className?: string
   ariaLabel?: string
-  span?: number
+  span?: number // Grid column span for wide buttons
   disabled?: boolean
 }
 
@@ -20,6 +23,7 @@ export default function Button({
   span = 1,
   disabled = false,
 }: ButtonProps) {
+  // Base button classes for consistent styling across all button types
   const baseClasses = `
     h-16 md:h-20 rounded-full font-medium text-2xl md:text-3xl
     transition-all duration-150 active:scale-95

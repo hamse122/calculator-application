@@ -51,6 +51,7 @@ export default function Keypad({ onButtonClick, isScientificMode, className = ''
     ],
   ]
 
+  // Scientific mode buttons for advanced mathematical operations
   const scientificButtons: ButtonDef[][] = [
     [
       { label: 'sin', value: 'sin', type: 'function' },

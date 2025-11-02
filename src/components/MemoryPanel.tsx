@@ -35,6 +35,7 @@ export default function MemoryPanel({ className = '', onMemoryRecall, currentVal
     <div className={`bg-gray-800 dark:bg-gray-900 rounded-2xl p-4 md:p-6 ${className}`.trim()}>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg md:text-xl font-semibold text-white">Memory</h2>
+        {/* Memory value indicator with visual feedback */}
         <div
           className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 ${
             memory.hasValue
@@ -42,6 +43,7 @@ export default function MemoryPanel({ className = '', onMemoryRecall, currentVal
               : 'bg-gray-700 text-gray-400'
           }`}
           aria-live="polite"
+          aria-label={`Memory: ${memory.hasValue ? memory.value : 'Empty'}`}
         >
           {memory.hasValue ? memory.value : 'Empty'}
         </div>

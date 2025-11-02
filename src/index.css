@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar styling for better UX */
 ::-webkit-scrollbar {
   width: 8px;
 }

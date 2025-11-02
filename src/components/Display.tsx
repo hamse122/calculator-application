@@ -12,6 +12,7 @@ export default function Display({ value, className = '' }: DisplayProps) {
     if (displayRef.current) {
       const element = displayRef.current
       // Auto-adjust font size if content is too long
+      // This ensures large numbers remain readable without breaking layout
       const maxWidth = element.offsetWidth
       const scrollWidth = element.scrollWidth
       if (scrollWidth > maxWidth) {
@@ -41,6 +42,7 @@ export default function Display({ value, className = '' }: DisplayProps) {
         aria-label={`Calculator display: ${displayValue}`}
         aria-live="polite"
         aria-atomic="true"
+        tabIndex={0}
         style={{
           transformOrigin: 'right center',
           transition: 'transform 0.2s ease-out',

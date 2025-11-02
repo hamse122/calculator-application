@@ -1,3 +1,6 @@
+/**
+ * Types of calculator buttons for styling and behavior differentiation
+ */
 export type ButtonType = 'digit' | 'operator' | 'function' | 'memory' | 'utility'
 
 export type Operator = '+' | '-' | '×' | '÷' | '='
