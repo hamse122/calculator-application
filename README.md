@@ -9,6 +9,8 @@ A beautiful, production-ready calculator web application built with React, TypeS
 
 ## Quick Start
 
+Clone the repository and get started in minutes!
+
 ## Features
 
 ### 🎨 Visual & UX
