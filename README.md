@@ -7,6 +7,8 @@ A beautiful, production-ready calculator web application built with React, TypeS
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)
 ![Vite](https://img.shields.io/badge/Vite-5.0-purple)
 
+## Quick Start
+
 ## Features
 
 ### 🎨 Visual & UX
