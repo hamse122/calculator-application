@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Display from './Display'
 
+/**
+ * Display component stories for Storybook
+ * Shows various display states and formats
+ */
 const meta: Meta<typeof Display> = {
   title: 'Components/Display',
   component: Display,
