@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Button from './Button'
 
+/**
+ * Button component stories for Storybook
+ * Demonstrates all button types and states
+ */
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
