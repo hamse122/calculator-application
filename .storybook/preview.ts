@@ -1,3 +1,7 @@
+/**
+ * Storybook preview configuration
+ * Sets up global styles and parameters
+ */
 import type { Preview } from '@storybook/react'
 import '../src/index.css'
 
