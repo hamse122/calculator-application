@@ -1,4 +1,3 @@
-# Generated commit for documentation improvement
 /**
  * Types of calculator buttons for styling and behavior differentiation
  */

@@ -1,4 +1,3 @@
-# Generated commit for documentation improvement
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [

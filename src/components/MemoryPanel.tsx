@@ -1,4 +1,3 @@
-# Generated commit for documentation improvement
 import React from 'react'
 import { useMemory } from '../contexts/MemoryContext'
 import Button from './Button'

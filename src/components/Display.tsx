@@ -1,4 +1,3 @@
-# Generated commit for documentation improvement
 import React, { useEffect, useRef } from 'react'
 
 interface DisplayProps {

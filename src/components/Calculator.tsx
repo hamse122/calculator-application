@@ -1,4 +1,3 @@
-# Generated commit for documentation improvement
 import React, { useState, useEffect, useCallback } from 'react'
 import Display from './Display'
 import Keypad from './Keypad'

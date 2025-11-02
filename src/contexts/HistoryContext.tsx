@@ -1,4 +1,3 @@
-# Generated commit for documentation improvement
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import type { HistoryEntry } from '../types'
 
