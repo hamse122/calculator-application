@@ -1,3 +1,4 @@
+# Generated commit for documentation improvement
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 
 type Theme = 'light' | 'dark'
