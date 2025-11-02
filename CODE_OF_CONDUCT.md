@@ -17,3 +17,5 @@ Examples of behavior that contributes to a positive environment:
 
 Project maintainers are responsible for clarifying and enforcing our standards of acceptable behavior.
 
+
+<!-- Documentation improvement -->
