@@ -1,3 +1,7 @@
+/**
+ * Application entry point
+ * Renders the React app in strict mode for better development experience
+ */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
