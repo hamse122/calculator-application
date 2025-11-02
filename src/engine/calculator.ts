@@ -1,3 +1,4 @@
+# Generated commit for documentation improvement
 import Decimal from 'decimal.js'
 
 /**
