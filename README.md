@@ -221,9 +221,75 @@ npm run build-storybook
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome and greatly appreciated! This project follows a few simple guidelines to ensure consistency and quality.
+
+### How to Contribute
+
+1. **Fork the Repository**
+   - Fork the repository to your GitHub account
+   - Clone your fork locally: `git clone https://github.com/your-username/calculator-application.git`
+
+2. **Create a Branch**
+   - Create a new branch for your feature or bugfix: `git checkout -b feature/your-feature-name`
+   - Use descriptive branch names that indicate the purpose
+
+3. **Make Your Changes**
+   - Write clean, readable code following the existing style
+   - Add comments for complex logic
+   - Ensure TypeScript types are properly defined
+   - Follow the project's code style (Prettier and ESLint are configured)
+
+4. **Write Tests**
+   - Add tests for new features or bug fixes
+   - Ensure all tests pass: `npm test`
+   - Aim for good test coverage
+
+5. **Commit Your Changes**
+   - Write clear, descriptive commit messages
+   - Use conventional commit format when possible:
+     - `feat: add new feature`
+     - `fix: fix bug description`
+     - `docs: update documentation`
+     - `style: format code`
+     - `test: add tests`
+     - `refactor: refactor code`
+
+6. **Submit a Pull Request**
+   - Push your branch: `git push origin feature/your-feature-name`
+   - Open a Pull Request on GitHub
+   - Provide a clear description of your changes
+   - Reference any related issues
+
+### Development Guidelines
+
+- **Code Style**: Run `npm run format` before committing
+- **Linting**: Ensure `npm run lint` passes without errors
+- **Testing**: Write tests for new functionality
+- **TypeScript**: Use proper types, avoid `any` when possible
+- **Accessibility**: Maintain ARIA labels and keyboard navigation support
+- **Performance**: Keep animations smooth and optimize calculations
+
+### Reporting Issues
+
+If you find a bug or have a suggestion:
+
+1. Check existing issues to avoid duplicates
+2. Create a new issue with:
+   - Clear description of the problem or feature request
+   - Steps to reproduce (for bugs)
+   - Expected vs actual behavior
+   - Browser/OS information if relevant
+
+### Code of Conduct
+
+- Be respectful and inclusive
+- Provide constructive feedback
+- Help others learn and grow
+- Follow the project's coding standards
+
+Thank you for contributing to this project! 🎉
 
