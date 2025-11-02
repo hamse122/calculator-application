@@ -302,3 +302,5 @@ If you find a bug or have a suggestion:
 
 Thank you for contributing to this project! 🎉
 
+
+<!-- Documentation improvement -->
