@@ -1,3 +1,4 @@
+# Generated commit for documentation improvement
 import React from 'react'
 import { useHistory } from '../contexts/HistoryContext'
 import Button from './Button'
