@@ -27,3 +27,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Error handling for edge cases
 - Auto-scaling display for large numbers
 
+
+<!-- Documentation improvement -->
