@@ -1,3 +1,7 @@
+/**
+ * Comprehensive tests for calculator engine functions
+ * Tests cover basic operations, edge cases, and error handling
+ */
 import { describe, it, expect } from 'vitest'
 import {
   formatDisplay,
