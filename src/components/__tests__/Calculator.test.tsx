@@ -5,6 +5,7 @@ import ThemeProvider from '../../contexts/ThemeContext'
 import MemoryProvider from '../../contexts/MemoryContext'
 import HistoryProvider from '../../contexts/HistoryContext'
 
+// Wrapper component with all necessary providers for testing
 const CalculatorWithProviders = () => (
   <ThemeProvider>
     <MemoryProvider>
